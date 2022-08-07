@@ -1,0 +1,144 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: baseline;
+    padding: 20px 20px 50px;
+}
+
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    pointer-events: none;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 30, 225, 0.8);
+    font-size: 1em;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 10px 0 30px;
+    border-radius: 5px;
+}
+
+.score {
+    padding: 10px;
+}
+
+.score2 {
+    position: absolute;
+    padding: 10px;
+    right: 30px;
+}
+
+.player2 {
+    position: absolute;
+    right: 70px;
+}
+
+.restart_button {
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    padding: 15px;
+    border-color: #00FFEF;
+    background-color: rgb(2,0,133);
+    color: whitesmoke;
+    background-image: -webkit-linear-gradient(45deg, #00FFEF 50%, transparent 50%);
+    background-image: linear-gradient(45deg, rgb(79, 170, 19) 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    border-radius: 5px;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    cursor: pointer;
+  }
+  .restart_button:hover {
+    background-position: 0;
+    }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gridx10 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.card {
+    aspect-ratio: 3/4;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(50, 47, 255);
+    border-radius: 5px;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url('../images/card_background.jpg');
+    background-position: center;
+    backface-visibility: hidden;
+}
+
+.reveal-card {
+    transform: rotateY(180deg);
+}
+
+.disabled-card {
+    filter: saturate(0);
+}
+
+.active_player {
+    text-shadow: 
+    -1px -1px 0px #FFF, 
+    -1px 1px 0px #FFF,      
+     1px -1px 0px #FFF,    
+     1px 0px 0px #FFF;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.winner_player {
+    filter: drop-shadow(0 0 10px #32d632);
+}

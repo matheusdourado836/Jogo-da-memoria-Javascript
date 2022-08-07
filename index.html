@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/login.css">
+
+        <!-- defer serve para ele esperar o carregamento da página para executar os scripts do js.
+             Serve para poder colocar o link do js no head e nao no final do body -->
+        <script defer src="./js/login.js"></script>
+        
+        <title>Jodo da Memória | Login</title>
+    </head>
+    <body>
+        <form class="login_form">
+            <div class="login_header">
+                <h1>Jogo da Memória</h1>
+            </div>
+
+            <div class="input_form">
+                <h4 class="layer">Player 1</h4>
+                <input type="text" placeholder="Nome" maxlength="10" class="login_input_player1">
+
+                <h4 class="layer">Player 2</h4>
+                <input type="text" placeholder="Nome" maxlength="10" class="login_input_player2">
+
+                <select class="difficult" id="level">
+                    <option value="">Selecione a dificuldade</option>
+                    <option value="facil">Fácil</option>
+                    <option value="medio">Médio</option>
+                    <option value="dificil">Difícil</option>
+                </select>
+
+                <button type="submit" class="login_button" disabled>Jogar</button>
+            </div>
+
+        </form>
+        <div class="bubble">
+            <div class="speech"></div>
+            <img id="level_error_img" src="../jogo_da_memoria/images/futuro.png">
+        </div>
+    </body>
+</html>

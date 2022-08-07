@@ -1,0 +1,14 @@
+<resources>
+    <string name="random_speech">Parece que voce não escolheu uma dificuldade amigão!</string>
+    <string name="random_speech">Vamos logo amigao escolhe uma dificuldade aí</string>
+    <string name="random_speech">Voce não quer jogar sem escolher uma dificuldade né</string>
+    <string name="random_speech">Acho que voce esqueceu de escolher a dificuldade</string>
+    <string name="random_speech">Eu nao jogaria sem antes escolher uma dificuldade</string>
+    <string name="random_speech">I'M PICKLE RIIIIIIICK!!!!! (escolhe uma dificuldade ai)</string>
+    <string name="random_speech">Voce tem que escolher uma dificuldade para jogar!</string>
+    <string name="random_speech">E serio que a gente ta fazendo isso</string>
+    <string name="random_speech">Voce sabe que nao vai conseguir jogar se nao escolher</string>
+    <string name="random_speech">Nao to achando graca</string>
+    <string name="random_speech">Serio ja deu, escolhe uma dificuldade ai</string>
+    <string name="random_speech">Posso ficar aqui o dia todo</string>
+</resources>

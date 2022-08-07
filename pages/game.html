@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/game.css">
+
+        <script defer src="../js/game.js"></script>
+        <title>Jodo da Memória | Round 1</title>
+    </head>
+    <body>
+        <main>
+            <h1><span class="player_header"></span></h1>
+            <header>
+                <span class="player active_player"></span>
+                <span class="score">0</span>
+                <span class="player2"></span>
+                <span class="score2">0</span>
+                <button class="restart_button" type="submit" onclick="restartGame()" hidden>reiniciar</button>
+            </header>
+
+            <div class="grid"></div>
+            <canvas id="my-canvas" hidden></canvas>
+        </main>
+    </body>
+</html>
+<script src="../js/index.min.js"></script> 
