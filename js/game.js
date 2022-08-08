@@ -37,11 +37,11 @@ const changePlayer = (activePl) => {
     if(activePl == true) {
         spanPlayer2.classList.remove('active_player');
         spanPlayer.classList.add('active_player');
-        activePlayerHeader.innerHTML = spanPlayer.innerHTML + ' Esta Jogando';
+        activePlayerHeader.innerHTML = spanPlayer.innerHTML + ' esta jogando';
     }else {
         spanPlayer.classList.remove('active_player');
         spanPlayer2.classList.add('active_player');
-        activePlayerHeader.innerHTML = spanPlayer2.innerHTML + ' Esta Jogando';
+        activePlayerHeader.innerHTML = spanPlayer2.innerHTML + ' esta jogando';
     }
     
 }
@@ -62,6 +62,8 @@ const checkEndGame = () => {
     const scoreP2 = +pontosPlayer2.innerHTML;
 
     if(disabledCards.length == cardsImages.length*2) {
+        spanPlayer2.classList.remove('active_player');
+        spanPlayer.classList.remove('active_player');
         confete.removeAttribute('hidden');
         if(scoreP1 > scoreP2) {
             activePlayerHeader.innerHTML = `${spanPlayer.innerHTML} Venceu o Jogo!`;
@@ -107,7 +109,7 @@ const restartGame = () => {
     pontosPlayer1.innerHTML = 0;
     pontosPlayer2.innerHTML = 0;
     activePlayerHeader.classList.remove('winner_player');
-    activePlayerHeader.innerHTML = `${spanPlayer.innerHTML} Esta Jogando!`;
+    activePlayerHeader.innerHTML = `${spanPlayer.innerHTML} esta jogando!`;
     activePlayer = true;
     changePlayer(activePlayer);
     confete.setAttribute('hidden', '');
@@ -192,7 +194,7 @@ window.onload = () => {
     const player1Name = localStorage.getItem('player 1');
     const player2Name = localStorage.getItem('player 2');
     
-    activePlayerHeader.innerHTML = player1Name + ' Esta Jogando!';
+    activePlayerHeader.innerHTML = player1Name + ' esta jogando!';
     spanPlayer.innerHTML = player1Name;
     spanPlayer2.innerHTML = player2Name;
     
