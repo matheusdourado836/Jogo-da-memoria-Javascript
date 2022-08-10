@@ -39,7 +39,7 @@ const handleSubmit = (event) => {
     if(level.value == '') {
         popup.classList.add('mostrar');
         if(contador > 4) {
-            imgError.setAttribute('src', '../images/angryRick.png');
+            imgError.setAttribute('src', '/images/angryRick.png');
             speech.innerHTML = levelErrorText[randomNumber(6, 11)].innerHTML;
         }else if(contador >= 1){
             speech.innerHTML = levelErrorText[randomIndex].innerHTML;
