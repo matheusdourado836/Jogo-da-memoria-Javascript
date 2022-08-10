@@ -4,7 +4,7 @@ const spanPlayer2 = document.querySelector('.player2');
 const pontosPlayer1 = document.querySelector('.score');
 const pontosPlayer2 = document.querySelector('.score2');
 const activePlayerHeader = document.querySelector('.player_header');
-const restartButton = document.querySelector('.restart_button');
+const restartButton = document.querySelector('.div_botao');
 const dificuldade = localStorage.getItem('dificuldade');
 const confete = document.querySelector('#my-canvas');
 

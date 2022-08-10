@@ -31,10 +31,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .login_header h1 {
+    text-align: center;
     font-family: 'Get_Schwifty';
     color: #07E7D6;
     text-shadow: 
@@ -134,28 +135,30 @@ body {
     align-items: center;
 }
 
-.bubble img {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    height: 40%;
-    margin-left: 80px;
-    min-width: 150px;
-    min-height: 150px;
+.div_speech {
+    position: relative;
 }
+
+#level_error_img {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 100px;
+}
+
 
 .mostrar {
     display: flex;
 }
 
 .speech {
-    width: 420px;
+    width: 250px;
     background: green;
     margin-bottom: 100px;
-    margin-right: 120px;
-    padding: 20px;
+    margin-right: 110px;
+    padding: 10px;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1em;
     border-radius: 35px;
     color: cyan;
     position: relative;
@@ -164,7 +167,7 @@ body {
 .speech:before {
     content: "";
     position: absolute;
-    border-left: 30px solid green;
+    border-left: 0px solid green;
     border-right: 30px solid transparent;
     border-top: 30px solid transparent;
     border-bottom: 20px solid green;

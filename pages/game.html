@@ -14,11 +14,17 @@
         <main>
             <h1><span class="player_header"></span></h1>
             <header>
-                <span class="player active_player"></span>
-                <span class="score">0</span>
-                <span class="player2"></span>
-                <span class="score2">0</span>
-                <button class="restart_button" type="submit" onclick="restartGame()">restart</button>
+                <div class="div_player">
+                    <span class="player active_player"></span>
+                    <span class="score">0</span>
+                </div>
+                <div class="div_botao" >
+                    <button class="restart_button" type="submit" onclick="restartGame()">restart</button>
+                </div>
+                <div class="div_player2">
+                    <span class="player2"></span>
+                    <span class="score2">0</span>
+                </div>
             </header>
             <div class="grid"></div>
             <canvas id="my-canvas" hidden></canvas>
