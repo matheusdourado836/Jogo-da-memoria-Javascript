@@ -187,6 +187,7 @@ body {
     .layer {
         width: 180px;
         padding: 4px;
+        margin-left: 10px;
     }
     .login_button {
         justify-content: center;
