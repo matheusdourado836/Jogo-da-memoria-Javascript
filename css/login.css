@@ -185,7 +185,7 @@ body {
         align-items: center;
     }
     .layer {
-        width: 170px;
+        width: 180px;
         padding: 4px;
     }
     .login_button {
@@ -211,7 +211,7 @@ body {
         margin-bottom: 15px;
         outline: none;
         padding: 10px;
-        width: 50%;
+        width: 40%;
         max-width: 300px;
     }
     
@@ -223,7 +223,7 @@ body {
         margin-bottom: 15px;
         outline: none;
         padding: 10px;
-        width: 50%;
+        width: 40%;
         max-width: 300px;
     }
 }
