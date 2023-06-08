@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "xml2js": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "name": "jogo-da-memoria-javascript",
+  "version": "1.0.0",
+  "description": "jogo da memoria em javascript",
+  "main": "login.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusdourado836/Jogo-da-memoria-Javascript.git"
+  },
+  "author": "Matheus Dourado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusdourado836/Jogo-da-memoria-Javascript/issues"
+  },
+  "homepage": "https://github.com/matheusdourado836/Jogo-da-memoria-Javascript#readme"
+}

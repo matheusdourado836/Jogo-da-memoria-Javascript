@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(61, 59, 59);
+}
+
+.videoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-animation {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+  }
+  
+  .text-animation p {
+    position: absolute;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-size: 24px;
+    bottom: 0;
+    opacity: 1;
+    animation: fadeUp 60s linear forwards;
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  

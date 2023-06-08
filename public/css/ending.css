@@ -1,0 +1,11 @@
+.container {
+    background-image: url('../images/valentines_day.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
