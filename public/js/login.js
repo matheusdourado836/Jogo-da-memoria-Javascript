@@ -11,13 +11,33 @@ const imgError = document.querySelector('#level_error_img');
 var contador = 0;
 var timer;
 var levelErrorText = [];
-var text = '../strings/strings.json';
-fetch(text).then(async (res) => {
-    await res.json().then((json) => {
-        let strings = json.resources.string;    
-        levelErrorText = strings;
-    })
-})
+
+var jsonString = `
+{
+    "resources": {
+      "string": [
+        "Parece que voce não escolheu uma dificuldade amigão!",
+        "Vamos logo amigao escolhe uma dificuldade aí",
+        "Voce não quer jogar sem escolher uma dificuldade né",
+        "Acho que voce esqueceu de escolher a dificuldade",
+        "Eu nao jogaria sem antes escolher uma dificuldade",
+        "I'M PICKLE RIIIIIIICK!!!!! (escolhe uma dificuldade ai)",
+        "Voce tem que escolher uma dificuldade para jogar!",
+        "E serio que a gente ta fazendo isso",
+        "Voce sabe que nao vai conseguir jogar se nao escolher",
+        "Nao to achando graca",
+        "Serio ja deu, escolhe uma dificuldade ai",
+        "Posso ficar aqui o dia todo"
+      ]
+    }
+  }
+`;
+
+var jsonObject = JSON.parse(jsonString);
+
+var listaDeStrings = jsonObject.resources.string;
+
+levelErrorText = listaDeStrings;
 
 function randomNumber(a, b) {
     return Math.floor(Math.random() * (b - a + 1)) + a
@@ -38,7 +58,7 @@ const handleSubmit = (event) => {
     if(level.value == '') {
         popup.classList.add('mostrar');
         if(contador > 4) {
-            imgError.setAttribute('src', './images/angryRick.png');
+            imgError.setAttribute('src', './public/images/angryRick.png');
             speech.innerHTML = levelErrorText[randomNumber(6, 11)];
         }else if(contador >= 1){
             speech.innerHTML = levelErrorText[randomIndex];
@@ -57,49 +77,7 @@ const handleSubmit = (event) => {
     }
 }
 
-function getRandomPosition() {
-  var screenWidth = window.innerWidth;
-  var screenHeight = window.innerHeight * 0.5;
-  var buttonWidth = 100;
-  var buttonHeight = 100;
-  
-  var maxX = screenWidth - buttonWidth;
-  var maxY = screenHeight - buttonHeight;
-  
-  var randomX = Math.floor(Math.random() * maxX);
-  var randomY = Math.floor(Math.random() * maxY);
-  
-  return { x: randomX, y: randomY };
-}
-  
-function setRandomPosition() {
-  var button = document.getElementById('btn');
-  var position = getRandomPosition();
-  
-  button.style.left = position.x + 'px';
-  button.style.top = position.y + 'px';
-}
-  
-function toggleButton() {
-    var button = document.getElementById('btn');
-    button.style.display = button.style.display === 'none' ? 'block' : 'none';
-    setRandomPosition();
-    timer = setTimeout(toggleButton, 1000);
-}
-
-function stopToggle() {
-    clearTimeout(timer);
-}
-  
-toggleButton();
-
-function openSpecialQuest() {
-    stopToggle();
-    window.location = 'public/pages/quest1.html';
-}
-
 input.addEventListener('input', validateInput);
 input2.addEventListener('input', validateInput);
 form.addEventListener('submit', handleSubmit);
 level.addEventListener('select', handleSubmit);
-specialQuest.addEventListener('submit', openSpecialQuest);

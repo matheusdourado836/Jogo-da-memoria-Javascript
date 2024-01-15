@@ -2,9 +2,10 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
+    background-position: center;
     background-image: url('../images/bg.jpg');
-    background-size: cover;
-    min-height: 100vh;
+    background-size: contain;
     align-items: center;
     justify-content: baseline;
     padding: 20px 20px 50px;
@@ -22,41 +23,30 @@ main {
 
 h1 {
     color: whitesmoke;
+    text-align: center;
 }
 
 header {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: rgba(255, 30, 225, 0.8);
     font-size: 1em;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     padding: 30px;
-    margin: 10px 0 30px;
+    margin: 30px 0 30px;
     border-radius: 5px;
 }
 
-.score {
-    padding: 10px;
-}
-
-.score2 {
-    position: absolute;
-    padding: 10px;
-    right: 30px;
-}
-
-.player2 {
-    position: absolute;
-    right: 70px;
+.score, .score2 {
+    font-size: 1.2em;
 }
 
 .restart_button {
-    position: absolute;
-    left: 40%;
-    right: 40%;
-    padding: 15px;
+    padding: 15px 30px 15px 30px;
+    font-size: 1em;
     border-color: #00FFEF;
     background-color: rgb(2,0,133);
     color: whitesmoke;
@@ -75,10 +65,10 @@ header {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 15px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -88,6 +78,15 @@ header {
     gap: 15px;
     width: 100%;
     max-width: 800px;
+    margin: 0 auto;
+}
+
+.gridx30 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -141,4 +140,49 @@ header {
 
 .winner_player {
     filter: drop-shadow(0 0 10px #32d632);
+}
+
+@media only screen and (max-width: 750px) {
+    main {
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+
+    header {
+        padding: 15px;
+        margin: 30px 0 30px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    .active_player {
+        font-size: .9em!important;
+    }
+
+    .player, .player2 {
+        font-size: 0.8em;
+    }
+    .score, .score2 {
+        font-size: 0.8em;
+    }
+
+    .restart_button {
+        padding: 10px;
+        font-size: .6em;
+      }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1050px) {
+    main {
+        height: auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }

@@ -175,8 +175,11 @@ const loadGame = () => {
         case 'medio':
             cardsImages.length = 15;
             cardsImages.sort(() => Math.random() - 0.5);
-            cardsImages.length = cardsImages.length - 5;
+            cardsImages.length = cardsImages.length - 3;
         default:
+            if(window.innerWidth < 1100 && window.innerWidth > 750) {
+                grid.classList.add('gridx30');
+            }
             break;
     }
     //Spread Operator. Para espalhar o array nesse outro array
